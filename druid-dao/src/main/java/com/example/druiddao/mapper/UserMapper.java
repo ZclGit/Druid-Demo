@@ -1,8 +1,11 @@
-package com.example.mapper;
+package com.example.druiddao.mapper;
 
 
-import com.example.module.User;
+import com.example.druidmodule.entity.User;
+import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+@Mapper
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -11,6 +14,8 @@ public interface UserMapper {
     int insertSelective(User record);
 
     User selectByPrimaryKey(Integer id);
+
+    List<User> selectUsers();
 
     int updateByPrimaryKeySelective(User record);
 

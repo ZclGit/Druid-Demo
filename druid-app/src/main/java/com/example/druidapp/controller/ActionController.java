@@ -1,6 +1,6 @@
 package com.example.druidapp.controller;
 
-import com.example.druidmodule.module.User;
+import com.example.druidmodule.entity.User;
 import com.example.druidsvc.service.ActionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +13,7 @@ import java.util.List;
 public class ActionController {
 
     @Autowired
-    ActionService actionService;
+    private ActionService actionService;
 
     @ResponseBody
     @RequestMapping("/getUsers")
