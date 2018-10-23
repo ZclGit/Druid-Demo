@@ -1,1 +1,8 @@
+#mybatis auto generator
 http://www.cnblogs.com/lichenwei/p/4145696.html
+
+#encode  decode
+https://www.cnblogs.com/limeiky/p/5391620.html
+
+#Status Code
+https://blog.csdn.net/qq_22855325/article/details/76068790
