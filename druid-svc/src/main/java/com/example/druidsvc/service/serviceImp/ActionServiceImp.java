@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 public class ActionServiceImp implements ActionService {
 
+    @Autowired
     private UserMapper userMapper;
 
     @Override

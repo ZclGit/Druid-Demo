@@ -25,13 +25,13 @@
     delete from t_user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-    <insert id="insert" parameterType="druid.module.User">
+    <insert id="insert" parameterType="com.example.druidmodule.entity.User">
     insert into t_user (id, name, age,
       address)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR},
       #{address,jdbcType=VARCHAR})
   </insert>
-    <insert id="insertSelective" parameterType="druid.module.User">
+    <insert id="insertSelective" parameterType="com.example.druidmodule.entity.User">
         insert into t_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -62,7 +62,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="druid.module.User">
+    <update id="updateByPrimaryKeySelective" parameterType="com.example.druidmodule.entity.User">
         update t_user
         <set>
             <if test="name != null">
@@ -77,7 +77,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="druid.module.User">
+    <update id="updateByPrimaryKey" parameterType="com.example.druidmodule.entity.User">
     update t_user
     set name = #{name,jdbcType=VARCHAR},
       age = #{age,jdbcType=VARCHAR},
