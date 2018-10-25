@@ -1,4 +1,4 @@
-package com.example.druidsvc;
+package com.example.druid;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class DruidSvcApplicationTests {
+public class DruidModuleApplicationTests {
 
 	@Test
 	public void contextLoads() {

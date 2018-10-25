@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.druiddao.mapper.UserMapper">
-    <resultMap id="BaseResultMap" type="com.example.druidmodule.entity.User">
+<mapper namespace="com.example.druid.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="User">
         <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="name" jdbcType="VARCHAR" property="name"/>
         <result column="age" jdbcType="VARCHAR" property="age"/>
@@ -25,13 +25,13 @@
     delete from t_user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-    <insert id="insert" parameterType="com.example.druidmodule.entity.User">
+    <insert id="insert" parameterType="User">
     insert into t_user (id, name, age,
       address)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR},
       #{address,jdbcType=VARCHAR})
   </insert>
-    <insert id="insertSelective" parameterType="com.example.druidmodule.entity.User">
+    <insert id="insertSelective" parameterType="User">
         insert into t_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -62,7 +62,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.example.druidmodule.entity.User">
+    <update id="updateByPrimaryKeySelective" parameterType="User">
         update t_user
         <set>
             <if test="name != null">
@@ -77,7 +77,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.example.druidmodule.entity.User">
+    <update id="updateByPrimaryKey" parameterType="User">
     update t_user
     set name = #{name,jdbcType=VARCHAR},
       age = #{age,jdbcType=VARCHAR},

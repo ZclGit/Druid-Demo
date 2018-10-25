@@ -1,7 +1,7 @@
-package com.example.druidapp.controller;
+package com.example.druid.controller;
 
-import com.example.druidmodule.entity.User;
-import com.example.druidsvc.service.ActionService;
+import com.example.druid.entity.User;
+import com.example.druid.service.ActionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,7 +1,7 @@
-package com.example.druiddao.mapper;
+package com.example.druid.mapper;
 
 
-import com.example.druidmodule.entity.User;
+import com.example.druid.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

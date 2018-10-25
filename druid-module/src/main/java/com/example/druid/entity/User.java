@@ -1,4 +1,4 @@
-package com.example.druidmodule.entity;
+package com.example.druid.entity;
 
 public class User {
     private Integer id;
